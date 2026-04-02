@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Malik Elzarif</title>
+  <meta
+    name="description"
+    content="Contact Malik Elzarif for web design, branding, and business systems."
+  />
+  <link rel="icon" href="assets/icons/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="site-body">
+  <div class="site-bg-orb site-bg-orb--orange"></div>
+  <div class="site-bg-orb site-bg-orb--blue"></div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="index.html" class="brand brand--logo" aria-label="Malik Elzarif home">
+  <img
+    src="assets/logo/logo-me.png"
+    alt="Malik Elzarif logo"
+    class="brand-logo"
+  />
+  <span class="brand-text">
+    <strong>Malik Elzarif</strong>
+    <small>Web Design • Branding • Business Systems</small>
+  </span>
+</a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="is-active">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-secondary hide-tablet" href="projects.html">View Work</a>
+        <a class="btn btn-primary hide-mobile" href="mailto:malikelzarif@gmail.com">Email Malik</a>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="is-active">Contact</a>
+        <a class="btn btn-primary mobile-menu-cta" href="mailto:malikelzarif@gmail.com">Email Malik</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__grid">
+        <div class="page-hero__copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Contact
+          </div>
+          <h1>Let’s build a stronger digital presence for your business.</h1>
+          <p>
+            Whether you need a premium website, better branding, or cleaner business presentation,
+            I’m ready to help shape something more refined and more effective.
+          </p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:malikelzarif@gmail.com">Email Malik</a>
+            <a class="btn btn-secondary" href="https://wa.me/12015880399" target="_blank" rel="noopener noreferrer">Message on WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="page-hero__media reveal reveal-delay-1 parallax-item" data-parallax-speed="0.07">
+          <img
+            src="assets/images/shared/page-banner-contact.webp"
+            alt="Contact and studio workspace visual"
+            class="media-cover"
+          />
+          <div class="page-hero__overlay">
+            <h3>Clear communication. Premium execution.</h3>
+            <p>Reach out to discuss your website, branding, or business system goals.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-main">
+        <div class="contact-main__copy reveal">
+          <span class="section-kicker">Direct Contact</span>
+          <h2>Project inquiries, consultations, and business conversations.</h2>
+          <p>
+            Use the form or contact me directly by email, phone, or WhatsApp.
+            I work best with businesses that want a stronger presentation, cleaner structure,
+            and a more premium overall feel.
+          </p>
+
+          <ul class="feature-list">
+            <li>Email: malikelzarif@gmail.com</li>
+            <li>Phone: +1 (201) 588-0399</li>
+            <li>WhatsApp: +1 (201) 588-0399</li>
+          </ul>
+        </div>
+
+        <div class="contact-main__media reveal reveal-delay-1">
+          <img
+            src="assets/images/contact/contact-workspace.webp"
+            alt="Premium workspace and contact page visual"
+            class="media-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="contact-form-shell reveal">
+          <div class="section-heading" style="margin-bottom: 28px;">
+            <div>
+              <span class="section-kicker">Inquiry Form</span>
+              <h2>Tell me about your project.</h2>
+            </div>
+            <p>
+              This form opens your email app with a structured message so sending an inquiry is faster.
+            </p>
+          </div>
+
+          <form id="contact-form" class="form-grid">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label for="company">Business / Brand Name</label>
+                <input type="text" id="company" name="company" placeholder="Your business name" />
+              </div>
+
+              <div class="form-field">
+                <label for="service">Service Needed</label>
+                <input type="text" id="service" name="service" placeholder="Web design, branding, systems..." />
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Project Details</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="7"
+                placeholder="Tell me about your goals, what you need, and what kind of business presence you want to build."
+                required
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary" type="submit">Send Project Inquiry</button>
+            <p class="form-note">
+              You can also email directly at
+              <a href="mailto:malikelzarif@gmail.com">malikelzarif@gmail.com</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <article class="contact-card reveal">
+          <h3>Email</h3>
+          <p><a href="mailto:malikelzarif@gmail.com">malikelzarif@gmail.com</a></p>
+        </article>
+
+        <article class="contact-card reveal reveal-delay-1">
+          <h3>Phone</h3>
+          <p><a href="tel:+12015880399">+1 (201) 588-0399</a></p>
+        </article>
+
+        <article class="contact-card reveal reveal-delay-2">
+          <h3>WhatsApp</h3>
+          <p><a href="https://wa.me/12015880399" target="_blank" rel="noopener noreferrer">Start Chat</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="brand brand--logo" aria-label="Malik Elzarif home">
+  <img
+    src="assets/logo/logo-me.png"
+    alt="Malik Elzarif logo"
+    class="brand-logo"
+  />
+  <span class="brand-text">
+    <strong>Malik Elzarif</strong>
+    <small>Web Design • Branding • Business Systems</small>
+  </span>
+</a>
+        <p>Premium web design, branding, and business systems for businesses that want to look more established.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="mailto:malikelzarif@gmail.com">malikelzarif@gmail.com</a></li>
+          <li><a href="tel:+12015880399">+1 (201) 588-0399</a></li>
+          <li><a href="https://wa.me/12015880399" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Malik Elzarif. All rights reserved.</p>
+      <p>Designed and developed for a premium brand presence.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
