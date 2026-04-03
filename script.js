@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Header scroll state
   const handleHeaderState = () => {
     if (!header) return;
+
     if (window.scrollY > 18) {
       header.classList.add("is-scrolled");
     } else {
@@ -19,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   handleHeaderState();
-  window.addEventListener("scroll", handleHeaderState);
+  window.addEventListener("scroll", handleHeaderState, { passive: true });
 
   // Mobile menu
   if (menuToggle && mobileMenu) {
@@ -37,6 +38,27 @@ document.addEventListener("DOMContentLoaded", () => {
         menuToggle.setAttribute("aria-expanded", "false");
         body.classList.remove("menu-open");
       });
+    });
+
+    document.addEventListener("click", (event) => {
+      const clickedInsideMenu = mobileMenu.contains(event.target);
+      const clickedToggle = menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedToggle && mobileMenu.classList.contains("is-open")) {
+        mobileMenu.classList.remove("is-open");
+        menuToggle.classList.remove("is-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        body.classList.remove("menu-open");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+        mobileMenu.classList.remove("is-open");
+        menuToggle.classList.remove("is-active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        body.classList.remove("menu-open");
+      }
     });
   }
 
@@ -64,6 +86,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Light parallax
   const applyParallax = () => {
     if (!parallaxItems.length) return;
+    if (window.innerWidth <= 760) {
+      parallaxItems.forEach((item) => {
+        item.style.transform = "translate3d(0, 0, 0)";
+      });
+      return;
+    }
 
     const viewportCenter = window.innerHeight * 0.5;
 
@@ -77,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   let ticking = false;
+
   const onScrollParallax = () => {
     if (!ticking) {
       window.requestAnimationFrame(() => {
@@ -100,9 +129,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!href) return;
 
     const cleanHref = href.split("#")[0];
-    if (cleanHref === currentPage) {
-      link.classList.add("is-active");
-    } else if (currentPage === "" && cleanHref === "index.html") {
+    link.classList.remove("is-active");
+
+    if (cleanHref === currentPage || (currentPage === "" && cleanHref === "index.html")) {
       link.classList.add("is-active");
     }
   });
@@ -129,8 +158,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `${message}`
       ];
 
-      const body = encodeURIComponent(bodyLines.join("\n"));
-      window.location.href = `mailto:malikelzarif@gmail.com?subject=${subject}&body=${body}`;
+      const emailBody = encodeURIComponent(bodyLines.join("\n"));
+      window.location.href = `mailto:malikelzarif@gmail.com?subject=${subject}&body=${emailBody}`;
     });
   }
 });
