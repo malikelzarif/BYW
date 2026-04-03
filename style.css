@@ -1706,4 +1706,86 @@ textarea {
   .trust-strip__inner {
     padding: 16px;
   }
+}/* =========================================
+   GLOBAL NAME GRADIENT SYSTEM
+========================================= */
+
+:root {
+  --name-purple: #b79ab4;
+  --name-gradient: linear-gradient(
+    90deg,
+    #d98652 0%,
+    #c68d88 22%,
+    #b79ab4 46%,
+    #8fa0da 72%,
+    #6f8fe8 100%
+  );
+}
+
+.name-gradient {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  background: var(--name-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.name-gradient--hero {
+  font-size: clamp(2.8rem, 4.8vw, 5.15rem);
+}
+
+.name-gradient--section {
+  font-size: clamp(2rem, 2.8vw, 3.35rem);
+  line-height: 1.08;
+}
+
+.name-gradient--nav {
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.name-gradient--footer {
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.name-gradient--inline {
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+}
+
+@media (max-width: 760px) {
+  .name-gradient--hero {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+  }
+
+  .name-gradient--section {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .name-gradient--nav,
+  .name-gradient--footer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name-gradient--hero {
+    font-size: clamp(1.9rem, 10.5vw, 2.6rem);
+  }
+
+  .name-gradient--nav,
+  .name-gradient--footer {
+    font-size: 0.84rem;
+  }
 }
